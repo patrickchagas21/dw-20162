@@ -51,6 +51,7 @@ Toda a comunicação será realizada usando o [![Slack Status](https://ifpb.hero
 
 ### Bibliografia Complementar
 
+* [Apostila do Caelum: Desenvolvimento Web com HTML, CSS e JavaScript](https://www.caelum.com.br/apostila-html-css-javascript/)
 * [Manuais de tecnologias Front-end](https://www.webplatform.org/)
 * [Javascripts Books](http://jsbooks.revolunet.com/)
 * [Manuais do PHP](http://www.php.net)
