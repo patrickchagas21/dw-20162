@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    table, td, th {
+      border: 1px solid #000;
+    }
+    table {
+      border-collapse: collapse;
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption>Host Monitorados</caption>
+    <thead>
+      <tr>
+        <th>Host</th>
+        <th>Address</th>
+        <th colspan="2">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3">PC01</td>
+        <td rowspan="3">192.168.0.1</td>
+        <td>HTTP</td>
+        <td>up</td>
+      </tr>
+      <tr>
+        <td>FTP</td>
+        <td>up</td>
+      </tr>
+      <tr>
+        <td>SMTP</td>
+        <td>down</td>
+      </tr>
+      <tr>
+        <td>PC02</td>
+        <td>192.168.0.2</td>
+      </tr>
+      <tr>
+        <td>PC03</td>
+        <td>192.168.0.3</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
