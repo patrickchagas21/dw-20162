@@ -11,6 +11,9 @@
       border-collapse: collapse;
       width: 400px;
     }
+    img {
+      width: 20px;
+    }
   </style>
 </head>
 <body>
@@ -28,24 +31,45 @@
         <td rowspan="3">PC01</td>
         <td rowspan="3">192.168.0.1</td>
         <td>HTTP</td>
-        <td>up</td>
+        <td><img src="server-up.svg" alt="server up"></td>
       </tr>
       <tr>
         <td>FTP</td>
-        <td>up</td>
+        <td><img src="server-up.svg" alt="server up"></td>
       </tr>
       <tr>
         <td>SMTP</td>
-        <td>down</td>
+        <td><img src="server-down.svg" alt="server down"></td>
       </tr>
       <tr>
-        <td>PC02</td>
-        <td>192.168.0.2</td>
+        <td rowspan="4">PC02</td>
+        <td rowspan="4">192.168.0.2</td>
+        <td>POP3</td>
+        <td><img src="server-up.svg" alt="server up"></td>
       </tr>
       <tr>
-        <td>PC03</td>
-        <td>192.168.0.3</td>
+        <td>SSH</td>
+        <td><img src="server-down.svg" alt="server down"></td>
       </tr>
+      <tr>
+        <td>HTTP</td>
+        <td><img src="server-up.svg" alt="server up"></td>
+      </tr>
+      <tr>
+        <td>DNS</td>
+        <td><img src="server-up.svg" alt="server up"></td>
+      </tr>
+      <tr>
+        <td rowspan="2">PC03</td>
+        <td rowspan="2">192.168.0.3</td>
+        <td>HTTP</td>
+        <td><img src="server-up.svg" alt="server up"></td>
+      </tr>
+      <tr>
+        <td>DNS</td>
+        <td><img src="server-up.svg" alt="server up"></td>
+      </tr>
+
     </tbody>
   </table>
 </body>
