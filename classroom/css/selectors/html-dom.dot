@@ -1,0 +1,9 @@
+digraph G {
+  section;
+  p1 [ label = "p" ];
+  p2 [ label = "p" ];
+  blockquote;
+  p3 [ label = "p" ];
+  p4 [ label = "p" ];
+  section -> {p1, p2, blockquote, p3, p4};
+}

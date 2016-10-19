@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* h1, p, blockquote */
+    * {
+      color: gray;
+    }
+    blockquote {
+      background-color: darkseagreen;
+    }
+
+    /* body p[class=important] */
+    body .important {
+      font-weight: bold;
+    }
+    #red {
+      color: red;
+    }
+    #first > p {
+      color: blue;
+    }
+
+    #first section blockquote + p {
+      color: orange;
+    }
+    #first-p::first-line {
+      font-size: 25px;
+    }
+    table tr.odd td,  table tr:nth-child(2n+1) td{
+      background-color: gray;
+      color: black;
+    }
+    table {
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <section id="first">
+    <h1>Lorem ipsum dolor</h1>
+    <p id="first-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+    <p>Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+    <blockquote style="background-color:darkorange">Labore, quo fuga eveniet voluptas adipisci omnis dolores et dolorum incidunt laudantium, obcaecati sit aut similique suscipit quam quos enim perspiciatis soluta veniam nemo aspernatur! Commodi cumque ipsam sapiente a.</blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+    <p>Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+    <blockquote>Labore, quo fuga eveniet voluptas adipisci omnis dolores et dolorum incidunt laudantium, obcaecati sit aut similique suscipit quam quos enim perspiciatis soluta veniam nemo aspernatur! Commodi cumque ipsam sapiente a.</blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+    <p>Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+    <section>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+      <p>Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+      <blockquote>Labore, quo fuga eveniet voluptas adipisci omnis dolores et dolorum incidunt laudantium, obcaecati sit aut similique suscipit quam quos enim perspiciatis soluta veniam nemo aspernatur! Commodi cumque ipsam sapiente a.</blockquote>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+      <p>Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+    </section>
+  </section>
+  <section>
+    <blockquote>Labore, quo fuga eveniet voluptas adipisci omnis dolores et dolorum incidunt laudantium, obcaecati sit aut similique suscipit quam quos enim perspiciatis soluta veniam nemo aspernatur! Commodi cumque ipsam sapiente a.</blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+    <p>Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+    <p class="important">Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+    <p class="important">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+    <p>Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+    <p id="red">Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, repellendus tempore minus reiciendis ipsam dolorem commodi odio deserunt? Cumque ipsa sit omnis, itaque amet est ipsum iste soluta nostrum quis.</p>
+    <p>Autem aut soluta neque accusantium ipsam unde maxime assumenda repellendus eveniet facilis! Porro blanditiis, similique eius unde minima assumenda, quod nobis ipsum neque. Aliquid error ullam autem quas laudantium maiores.</p>
+    <table>
+      <tr class="odd">
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr class="even">
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr class="odd">
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr class="even">
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr class="odd">
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr class="even">
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+    </table>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dolorum illum modi ipsum rerum, molestiae, deleniti et ratione. Numquam veritatis beatae, aperiam eaque, perferendis rem ipsam modi. Incidunt in, quo?</p>
+    <table>
+      <tr>
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr>
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr>
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr>
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr>
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+      <tr>
+        <td>Texto 1</td>
+        <td>Texto 2</td>
+        <td>Texto 3</td>
+        <td>Texto 4</td>
+        <td>Texto 5</td>
+      </tr>
+    </table>
+  </section>
+</body>
+</html>
