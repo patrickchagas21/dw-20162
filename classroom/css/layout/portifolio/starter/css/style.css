@@ -39,6 +39,25 @@ h5 {
 .orange-text.text-lighten-3 {
   color: #ffcc80;
 }
+.container {
+  margin: 0 auto;
+  width: 940px;
+  white-space: nowrap;
+}
+.col {
+  white-space: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+.col.col6{
+  width: 50%;
+}
+.col.col3{
+  width: 25%;
+}
+.col.col4{
+  width: 33.3%;
+}
 
 /* header */
 header {
@@ -73,25 +92,6 @@ header {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
   text-transform: uppercase;
   padding: 0 2rem;
-}
-.container {
-  margin: 0px auto;
-  width: 940px;
-  white-space: nowrap;
-}
-.col {
-  white-space: normal;
-  display: inline-block;
-  vertical-align: top;
-}
-.col.col6{
-  width: 50%;
-}
-.col.col3{
-  width: 25%;
-}
-.col.col4{
-  width: 33.3%;
 }
 
 /* banner */
