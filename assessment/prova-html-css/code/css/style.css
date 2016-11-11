@@ -7,25 +7,6 @@ body {
   font-size: 13px;
   margin: 0;
 }
-.container {
-  margin: 0 auto;
-  width: 100%;
-  white-space: nowrap;
-}
-.col {
-  white-space: normal;
-  display: inline-block;
-  vertical-align: top;
-}
-.col.col6{
-  width: 50%;
-}
-.col.col3{
-  width: 25%;
-}
-.col.col4{
-  width: 33.3%;
-}
 
 /* header */
 header.black-bg {
@@ -68,3 +49,5 @@ header img.user {
   border-radius: 50%;
   margin-left: 10px;
 }
+
+/* main */

@@ -1,0 +1,265 @@
+<!-- http://blacktie.co/2014/07/dashgum-free-dashboard/ -->
+<!-- http://linuxdash.afaqtariq.com/#/system-status -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Ruda" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="black-bg">
+    <a href="#" class="header-menu">
+      <i class="material-icons">menu</i>
+    </a>
+    <a href="#" class="header-title">HostDash</a>
+    <nav class="header-menu-right">
+      <a href="#"><i class="material-icons">date_range</i></a>
+      <a href="#"><i class="material-icons">notifications</i></a>
+      <a href="#"><img class="user" src="img/admin.jpg" alt="admin"></a>
+    </nav>
+  </header>
+  <main>
+    <!-- <h1>Host Monitor</h1> -->
+    <form action="">
+      <!-- <i class="material-icons">desktop_windows</i> -->
+      <input type="text" placeholder="hostname">
+      <button><i class="material-icons">search</i></button>
+    </form>
+    <div class="container">
+      <section class="white-panel col col3">
+        <header class="white-header">
+          GENERAL INFO
+        </header>
+        <main>
+          <i class="material-icons">info_outline</i>
+          <table>
+            <tbody>
+              <tr>
+                <td>Hostname</td>
+                <td>yoshi</td>
+              </tr>
+              <tr>
+                <td>OS</td>
+                <td>CentOS</td>
+              </tr>
+              <tr>
+                <td>Uptime</td>
+                <td>40' 32''</td>
+              </tr>
+              <tr>
+                <td>Processor</td>
+                <td>Quad Core Xeon E5 2.8 Ghz</td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </section>
+
+      <section id="cpu-status" class="white-panel col col3">
+        <header class="white-header">
+          CPU LOAD
+        </header>
+        <main>
+          <i class="material-icons">memory</i>
+          <table>
+            <thead>
+              <tr>
+                <th>Instant</th>
+                <th>Load Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Last 1'</td>
+                <td>1%</td>
+              </tr>
+              <tr>
+                <td>Last 10'</td>
+                <td>80%</td>
+              </tr>
+              <tr>
+                <td>Last 15'</td>
+                <td>20%</td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </section>
+
+      <section id="memory-status" class="white-panel col col3">
+        <header class="white-header">
+          MEMORY
+        </header>
+        <main>
+          <i class="material-icons">straighten</i>
+          <div id="memory-size">
+            8 GB
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Used</th>
+                <th>Free</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>20%</td>
+                <td>80%</td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </section>
+    </div>
+    <div class="container">
+      <section class="white-panel col col3">
+        <header class="white-header">
+          PROCESS
+        </header>
+        <main>
+          <h2>TOP 7</h2>
+          <table id="top-process">
+            <thead>
+              <tr>
+                <th>PID</th>
+                <th>USER</th>
+                <th>CPU%</th>
+                <th>MEM%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>44802</td>
+                <td>root</td>
+                <td>10</td>
+                <td>1M</td>
+              </tr>
+              <tr>
+                <td>3956</td>
+                <td>root</td>
+                <td>7</td>
+                <td>34K</td>
+              </tr>
+              <tr>
+                <td>3090</td>
+                <td>mario</td>
+                <td>5</td>
+                <td>188K</td>
+              </tr>
+              <tr>
+                <td>5890</td>
+                <td>luigi</td>
+                <td>2.5</td>
+                <td>888K</td>
+              </tr>
+              <tr>
+                <td>9821</td>
+                <td>luigi</td>
+                <td>2</td>
+                <td>132K</td>
+              </tr>
+              <tr>
+                <td>1234</td>
+                <td>mario</td>
+                <td>2</td>
+                <td>2M</td>
+              </tr>
+              <tr>
+                <td>4545</td>
+                <td>root</td>
+                <td>1</td>
+                <td>10M</td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </section>
+
+      <section class="white-panel col col3">
+        <header class="white-header">
+          DISK USAGE
+        </header>
+        <main>
+          <i class="material-icons">storage</i>
+          <div id="memory-size">
+            1 TB
+          </div>
+          <table id="disk-usage">
+            <thead>
+              <tr>
+                <th>Device</th>
+                <th>Used</th>
+                <th>System</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>/dev/sda1</td>
+                <td>10G/100G<!--(10%)--></td>
+                <td>Linux Swap</td>
+              </tr>
+              <tr>
+                <td>/dev/sda2 *</td>
+                <td>40G/400G<!--(10%)--></td>
+                <td>Linux</td>
+              </tr>
+              <tr>
+                <td>/dev/sda3</td>
+                <td>100G/500G<!--(20%)--></td>
+                <td>Linux</td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </section>
+
+      <section class="white-panel col col3">
+        <header class="white-header">
+          NETWORK INTERFACES
+        </header>
+        <main>
+          <i class="material-icons">cloud_queue</i>
+          <table>
+            <thead>
+              <tr>
+                <th>Interface</th>
+                <th>TX</th>
+                <th>RX</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>eth0</td>
+                <td>1.7GB</td>
+                <td>1GB</td>
+              </tr>
+              <tr>
+                <td>eth1</td>
+                <td>400MB</td>
+                <td>2MB</td>
+              </tr>
+              <tr>
+                <td>lo</td>
+                <td>10MB</td>
+                <td>11MB</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Total</td>
+                <td>2.11GB</td>
+                <td>1.0GB</td>
+              </tr>
+            </tfoot>
+          </table>
+        </main>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
