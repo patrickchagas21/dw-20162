@@ -79,6 +79,7 @@ console.log(Object.is({}, {})); // Not comapre Object
 
 console.log(1 === 1);
 console.log("1" === "1");
+console.log("1" === 1);
 
 // Bitwise shift operators (<<, >>, >>>)
 //  Bitwise operators treat their operands as a sequence of 32 bits
@@ -133,6 +134,10 @@ var [a, , b] = [8, 80, 800]; // Ignoring some values
 console.log(a);
 console.log(b);
 
+var [a, b] = [8, 80, 800]; // Ignoring some values
+console.log(a);
+console.log(b);
+
 
 var a = 1; // Swapping variables
 var b = 3;
@@ -143,6 +148,10 @@ console.log(b); // 1
 var [number, string] = [8, 'fulano'];
 console.log(number);
 console.log(string);
+
+var [ip, mask] = ["192.168.0.2"];
+console.log(ip);
+console.log(mask);
 
 var [ip, mask = "255.255.255.0"] = ["192.168.0.2"]; // Fail-Soft Destructuring
 console.log(ip);
@@ -156,6 +165,11 @@ console.log(mask);
 var {ip, mask} = {ip: "192.168.0.2", mask: "255.255.255.0"};
 console.log(ip);
 console.log(mask);
+
+var {ip, mask} = {mask: "255.255.255.0", ip: "192.168.0.2"};
+console.log(ip);
+console.log(mask);
+
 
 // Destructuring Assignment / Deep Matching
 var {ip: ipAdd, mask: maskAdd} = {ip: "192.168.0.2", mask: "255.255.255.0"};
