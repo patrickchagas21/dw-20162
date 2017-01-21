@@ -60,6 +60,27 @@ console.log(Addition(1));
 console.log(Addition(1, 2));
 
 // overload
+// public class Teste { // overload JAVA
+//
+// 	public static int addition(int a){
+// 		return a+1;
+// 	}
+//
+// 	public static int addition(int a, int b){
+// 		return a+b;
+// 	}
+//
+// 	public static int addition(String a, String b){
+// 		return (int) Integer.parseInt(a)+Integer.parseInt(b);
+// 	}
+//
+// 	public static void main(String[] args) {
+// 		System.out.println(addition(1, 1));
+// 		System.out.println(addition("1", "1"));
+//
+// 	}
+//
+// }
 function addition(param1, param2){
   return param1 + param2;
 }
@@ -181,11 +202,12 @@ b = addSquares(3,4); // returns 25
 c = addSquares(4,5); // returns 41
 
 // es6 Arrow Function (=>)
-const sum = function(param1, param2){ return param1 + param2 };
+const sum = function(param1, param2){ return param1 + param2; };
 
 const sum = (param1, param2) => { return param1 + param2 };
 const sum = (param1, param2) => param1 + param2;
 
+console.log([1,2,3].map((value) => 2*value));
 console.log([1,1,1].reduce((sum,value) => sum+value));
 console.log([1,1,1].reduce(function(sum,value){return sum+value}, 0));
 

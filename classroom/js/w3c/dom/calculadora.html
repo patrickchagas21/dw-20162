@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input id="operand1" type="text">
+  <input id="operand2" type="text">
+  <button id="add" onclick="addition()">+</button>
+  <input id="result" type="text">
+  <script>
+    const operand1 = document.querySelector('#operand1');
+    const operand2 = document.querySelector('#operand2');
+    const add = document.querySelector('#add');
+    const result = document.querySelector('#result');
+
+    function addition(){
+      let operandValue1 = parseInt(operand1.value);
+      let operandValue2 = parseInt(operand2.value);
+      result.value = operandValue1 +operandValue2;
+    }
+  </script>
+</body>
+</html>

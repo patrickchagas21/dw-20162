@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table id="ips">
+    <thead>
+      <th>Address</th>
+      <th>Mask</th>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script>
+    const ipsTbody = document.querySelector('#ips tbody');
+    let ips = [
+      {address: "192.168.0.2", mask: "255.255.255.0"},
+      {address: "192.168.0.10", mask: "255.255.255.0"},
+      {address: "192.168.0.26", mask: "255.255.255.0"},
+      {address: "192.168.0.30", mask: "255.255.255.0"}
+    ];
+    let ipsTbodyContent = '';
+    for (ip of ips) {
+      ipsTbodyContent += `<tr><td>${ip.address}</td><td>${ip.mask}</td></tr>`;
+    }
+    ipsTbody.innerHTML = ipsTbodyContent;
+  </script>
+</body>
+</html>
