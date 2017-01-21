@@ -52,6 +52,14 @@ for(let flag = 0; flag < 100; flag++){
 }
 console.log(result);
 
+var result = '';
+for(let flag = 99; flag >= 1; flag-=2){
+  result += (flag < 10)? '0' + flag + ' ' : flag + ' ';
+  if((flag - 1) % 10 == 0)
+    result += '\n';
+}
+console.log(result);
+
 //  for...of: Iterates over iterable objects (including arrays, array-like objects, iterators and generators)
 var numbers = [1, 2, 3, 4];
 for(let number of numbers){

@@ -4,16 +4,19 @@
 
 // Create an Array []
 var numbers = [1, 2, 4, 7];
+console.log(numbers);
 console.log(numbers[0]);
 console.log(numbers[3]);
 console.log(numbers[4]); //=> undefined
-console.log(numbers);
+
+var numbers = [1, 2, , 7];
+console.log(numbers[2]);
 
 // Changing Array
 // loading element
 numbers[4] = 10;
 // changing value
-numbers[2] = 5;
+numbers[1] = 5;
 console.log(numbers);
 
 // Defining Empty Array
@@ -31,6 +34,7 @@ console.log(numbers);
 // multiple types
 var values = [1, 'fulano', true, null, [1, 2]];
 console.log(values[1]);
+console.log(values);
 
 // string index
 var values = [];
@@ -66,6 +70,8 @@ console.log(result);
 var values = [];
 values[0] = 1;
 values['number'] = 10;
+values['Number'] = 10;
+values['a'] = 10;
 values[1] = 20;
 
 for(let index in values){
