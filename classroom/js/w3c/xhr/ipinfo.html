@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <table id="ipInfo">
+    <thead>
+      <th>Campos</th>
+      <th>Valores</th>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script>
+    const table = document.querySelector('#ipInfo tbody');
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', 'http://ipinfo.io/8.8.8.8/json');
+    xhr.onload = function(){
+      let ipInfo = JSON.parse(xhr.responseText);
+      let rows = '';
+      for(let info in ipInfo){
+        rows += `<tr><td>${info}</td><td>${ipInfo[info]}</td></tr>`;
+      }
+      table.innerHTML = rows;
+    }
+    xhr.send();
+  </script>
+</body>
+</html>

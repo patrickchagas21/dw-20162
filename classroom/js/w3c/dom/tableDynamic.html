@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="rownumber">
+  <input type="text" id="colnumber">
+  <button id="generatetable">Gerar Tabela</button>
+  <table id="table"></table>
+  <script>
+    const rownumber = document.querySelector('#rownumber');
+    const colnumber = document.querySelector('#colnumber');
+    const button = document.querySelector('#generatetable');
+    const table = document.querySelector('#table');
+
+    loadClickGenerateTable();
+
+    function loadClickGenerateTable(){
+      button.onclick = function(){
+        table.innerHTML = generateTableRows(rownumber.value, colnumber.value);
+      }
+    }
+
+    function generateTableRows(rowsize, colsize){
+      let tablerows = '';
+      for (let row=1; row<=rowsize; row++){
+        tablerows += '<tr>';
+        for (let col=1; col<=colsize; col++){
+          tablerows += `<td>Item ${row}.${col}</td>`;
+        }
+        tablerows += '</tr>';
+      }
+      return tablerows;
+    }
+  </script>
+</body>
+</html>
