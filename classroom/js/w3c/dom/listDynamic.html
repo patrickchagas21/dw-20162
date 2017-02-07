@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="listLenght">
+  <button>Gerar Lista</button>
+  <ul id="list"></ul>
+  <script>
+    const listLenght = document.querySelector('#listLenght');
+    const button = document.querySelector('button');
+    const list = document.querySelector('#list');
+
+    button.onclick = function(){
+      let listResult = '';
+      for(let flag = 1; flag <= listLenght.value; flag++){
+        listResult += `<li>Item ${flag}</li>`
+      }
+      list.innerHTML = listResult;
+    }
+  </script>
+</body>
+</html>

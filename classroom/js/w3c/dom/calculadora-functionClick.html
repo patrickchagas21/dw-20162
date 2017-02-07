@@ -7,24 +7,64 @@
   <title>Document</title>
 </head>
 <body>
-  <input id="operand1" type="text">
-  <input id="operand2" type="text">
-  <button id="add">+</button>
-  <input id="result" type="text">
+  <div id="calculator">
+    <input id="operand1" type="text">
+    <input id="operand2" type="text">
+    <button id="add">+</button>
+    <button id="sub">-</button>
+    <button id="mul">*</button>
+    <button id="div">/</button>
+    <input id="result" type="text">
+  </div>
   <script>
     const operand1 = document.querySelector('#operand1');
     const operand2 = document.querySelector('#operand2');
-    const add = document.querySelector('#add');
+    // const add = document.querySelector('#add');
+    // const sub = document.querySelector('#sub');
+    // const mul = document.querySelector('#mul');
+    // const div = document.querySelector('#div');
+    const buttons = document.querySelectorAll('#calculator button');
     const result = document.querySelector('#result');
 
-    add.onclick = function(){
-      addition();
+    for(let button of buttons){
+      button.onclick = function(){
+        tryClick(this.innerHTML);
+      }
     }
 
-    function addition(){
+    // add.onclick = function(){
+    //   tryClick(this.innerHTML);
+    // }
+    //
+    // sub.onclick = function(){
+    //   tryClick(this.innerHTML);
+    // }
+    //
+    // mul.onclick = function(){
+    //   tryClick(this.innerHTML);
+    // }
+    //
+    // div.onclick = function(){
+    //   tryClick(this.innerHTML);
+    // }
+
+    function tryClick(operation){
       let operandValue1 = parseInt(operand1.value);
       let operandValue2 = parseInt(operand2.value);
-      result.value = operandValue1 +operandValue2;
+      result.value = calc(operation, operandValue1, operandValue2);
+    }
+
+    function calc(operation, operand1, operand2){
+      switch (operation) {
+        case '+':
+          return operand1 + operand2;
+        case '-':
+          return operand1 - operand2;
+        case '*':
+          return operand1 * operand2;
+        case '/':
+          return operand1 / operand2;
+      }
     }
   </script>
 </body>

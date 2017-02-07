@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    main {
+      width: 50%;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <input type="text" id="address">
+      <input type="text" id="count">
+      <button id="pingButton">ping</button>
+    </section>
+    <table id="pingTable">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Host</th>
+          <th>Transmitted</th>
+          <th>Received</th>
+          <th>Losted</th>
+          <th>Time (ms)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <script>
+    const address = document.querySelector('#address');
+    const count = document.querySelector('#count');
+    const pingButton = document.querySelector('#pingButton');
+    const pingTable = document.querySelector('#pingTable tbody');
+    let countRow = 0;
+
+    loadClickInPingButton();
+
+    function loadClickInPingButton(){
+      pingButton.onclick = () => addRowInPingTableAction();
+    }
+
+    function addRowInPingTableAction(){
+      let addressValue = address.value;
+      let countValue = count.value;
+      getPingInfo(addressValue, countValue);
+    }
+
+    function getPingInfo(addressValue, countValue){
+      let url = `http://localhost:5000/v1/ping/${addressValue}/${countValue}`;
+      ajax("get", url, addRowByPingResponse);
+    }
+
+    function addRowByPingResponse(pingResponse){
+      pingResponse = JSON.parse(pingResponse);
+      let pingInfo = toPingInfo(pingResponse);
+      let row = Object.values(pingInfo);
+      row.unshift(++countRow);
+      pingTable.innerHTML = `<tr><td>${row.join('</td><td>')}</td></tr>`;
+    }
+
+    function toPingInfo(pingResponse){
+      let host = pingResponse.address;
+      let transmitted = pingResponse.statistics.transmitted;
+      let received = pingResponse.statistics.received;
+      let losted = transmitted - received;
+      let time = pingResponse.packets
+                    .reduce((previous, packet) => parseFloat(packet.time) + previous, 0)
+                    .toFixed(3);
+      return {host, transmitted, received, losted, time};
+    }
+
+    function ajax(method, url, callback){
+      let xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.onload = () => callback(xhr.responseText);
+      xhr.send();
+    }
+
+  </script>
+</body>
+</html>
