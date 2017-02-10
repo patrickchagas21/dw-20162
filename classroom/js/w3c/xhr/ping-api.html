@@ -19,6 +19,7 @@
     #pingTable {
       width: 60%;
       border-collapse: collapse;
+      visibility: hidden;
     }
     #pingTable td:hover{
       cursor: pointer;
@@ -66,7 +67,8 @@
     const address = document.querySelector('#address');
     const count = document.querySelector('#count');
     const pingButton = document.querySelector('#pingButton');
-    const pingTable = document.querySelector('#pingTable tbody');
+    const pingTableContent = document.querySelector('#pingTable tbody');
+    const pingTable = document.querySelector('#pingTable');
     const infoStatus = document.querySelector('#infoStatus');
     const addressStatus = document.querySelector('#addressStatus');
     const transmittedStatus = document.querySelector('#transmittedStatus');
@@ -84,8 +86,8 @@
     }
 
     function loadClickInLastRowPingTable(){
-      activeRow(pingTable.querySelector('tr:last-child'));
-      const lastedColumnsPingTable = pingTable.querySelectorAll('tr:last-child td');
+      activeRow(pingTableContent.querySelector('tr:last-child'));
+      const lastedColumnsPingTable = pingTableContent.querySelectorAll('tr:last-child td');
       for(let column of lastedColumnsPingTable){
         column.onclick = function(event){
           let row = event.target.parentNode;
@@ -96,7 +98,7 @@
     }
 
     function activeRow(row){
-      pingTable.querySelectorAll('tr').forEach(row => row.style.backgroundColor = "#fff");
+      pingTableContent.querySelectorAll('tr').forEach(row => row.style.backgroundColor = "#fff");
       row.style.backgroundColor = "#eee";
     }
 
@@ -130,13 +132,14 @@
         infoStatus.style.visibility = 'visible';
         updateStatusValues(pingInfo);
 
-        pingTable.insertAdjacentHTML('beforeend', `<tr data-address="${address}"><td>${rowValues.join('</td><td>')}</td></tr>`);
+        pingTableContent.insertAdjacentHTML('beforeend', `<tr data-address="${address}"><td>${rowValues.join('</td><td>')}</td></tr>`);
         loadClickInLastRowPingTable();
         loadStatusInfo(address);
       } else {
         alert("Erro na obtenção do Ping!");
       }
       spinner.style.visibility = 'hidden';
+      pingTable.style.visibility = 'visible';
     }
 
     function updateStatusValues(pingInfo){
