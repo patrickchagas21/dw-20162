@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <input type="text" name="name">
+    <input type="submit" value="Olá...">
+  </form>
+  <div id="hello"></div>
+  <script>
+    var nameField = document.querySelector('input[name=name]');
+    var helloButton = document.querySelector('input[type=submit]');
+    var helloField = document.querySelector('div#hello');
+
+    helloButton.addEventListener('click', helloWorld, false);
+
+    function helloWorld(event){
+      let name = nameField.value;
+      makeRequest({
+        url: `hello.php?name=${name}`,
+        sucessCallback: (responseText) => {
+          helloField.innerHTML = responseText;
+        }
+      });
+      event.preventDefault();
+    }
+
+    function makeRequest({method = 'get',
+        url = '',
+        data = '',
+        sucessCallback = () => {},
+        errorCallback = () => {}
+      }){
+      let xhr = new XMLHttpRequest();
+      xhr.open(method, url, true);
+      xhr.onload = function(){
+        if (xhr.status >= 200 && xhr.status < 400) {
+          sucessCallback(xhr.responseText);
+        } else {
+          // Connect but it returned an error
+        }
+      }
+      xhr.onerror = function(){
+        // There was a connection error
+        errorCallback();
+      }
+      xhr.send(data);
+    }
+  </script>
+</body>
+</html>
