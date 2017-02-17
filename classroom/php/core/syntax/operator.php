@@ -8,7 +8,7 @@
   var_dump(round(25/7));  // float(4)
   var_dump(2 ** 3);
 
-  // Comparison
+  // Comparison http://php.net/manual/en/types.comparisons.php
   var_dump("1 programador"+"1 computador" == "2 passos para o paraíso");
   var_dump("1 programador"+"1 computador" === (int)"2 passos paraíso");
   var_dump(1 <=> 0);
