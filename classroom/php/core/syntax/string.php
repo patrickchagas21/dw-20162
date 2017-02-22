@@ -7,21 +7,18 @@
   ipsum';
   var_dump($variable);
 
-  $variable = 'lorem
-  ipsum';
+  $variable = 'lorem\' ipsum';
   var_dump($variable);
 
-  $variable = 'lorem \'ipsum';
+  $variable = 'lorem \' ipsum';
   var_dump($variable);
 
-  $variable = 'lorem \ ipsum';
-  var_dump($variable);
-
-  $variable = 'lorem \\ ipsum';
+  $variable = 'lorem \\\' ipsum';
   var_dump($variable);
 
   $variable = 'lorem \n ipsum';
   var_dump($variable);
+  echo $variable;
 
   // double quoted
   $variable = "lorem ipsum";
@@ -29,6 +26,7 @@
 
   $variable = "lorem \n ipsum";
   var_dump($variable);
+  echo $variable;
 
   $name = 'fulano';
   $hello = 'Hello $name';

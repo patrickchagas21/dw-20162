@@ -19,6 +19,8 @@
   $variable = [1, 2, 3];
   var_dump($variable);
   print_r($variable);
+  // print($variable);
+  // echo($variable);
 
   // dinamic type
   $variable = 10;
@@ -41,8 +43,15 @@
   $email = $params['email'];
   echo $name, $email;
 
+  $params = ['name' => 'fulano', 'email' => 'fulano@email'];
   extract($params);
+  print_r(get_defined_vars());
   echo $name, $email;
+
+  $params = ['10' => 'fulano', '20' => 'fulano@email'];
+  extract($params);
+  print_r(get_defined_vars());
+  // echo $10, $20;
 
   // case sensitive
   $variable = 10;

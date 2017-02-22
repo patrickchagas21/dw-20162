@@ -14,6 +14,15 @@
   var_dump($variable['number']);
   var_dump($variable[1]);
 
+  $variable = [1, 'number' => 2, 3, 4 => 4, 5];
+  print_r($variable);
+  var_dump($variable[0]);
+  var_dump($variable['number']);
+  var_dump($variable[1]);
+  // var_dump($variable[3]);
+  var_dump($variable[4]);
+  var_dump($variable[5]);
+
   $variable = [
     [1, 2, 3],
     [4, 5, 6]

@@ -29,11 +29,16 @@
   var_dump(0.3-0.2);
   $x = 8 - 6.4;  // which is equal to 1.6
   $y = 1.6;
+  var_dump($x);
+  var_dump($y);
   var_dump($x == $y); // is not true
 
   // NaN
   $nan = acos(8); //NaN
   var_dump($nan, is_nan($nan));
+
+  // INF
+  var_dump(10/0);
 
   // $variable = 'fulano';
   // var_dump($variable, is_nan($variable));
