@@ -36,12 +36,42 @@ Assim, será exigido que a apresentação possua um tempo máximo de 3 minutos e
 
 ### Equipes
 
-**Equipe #1**: &lt;Nome do Projeto>
-> [Proposta](<link da proposta>) e [Código Fonte](<repositório do github>)
+**Equipe #1**: [Mithrandir Firewall](https://github.com/eduardofelipeff/mithrandir)
 
 > Membros:
-* Aluno 1 - Matrícula
-* Aluno 2 - Matrícula
+* Eduardo Felipe Fonseca de Freitas - 20151380079
+* Pedro Henrique Saliba Negri - 20151380044
+* Rebeca Moreira Faustino de Almeida - 20151380273
+
+**Equipe #2**: [Exaltasamba](https://github.com/gabbezerra/ProjetoDw)
+
+> Membros:
+* Erick Camara dos Santos- 20151380265
+* Gabriel Bezerra Leite - 20151380389
+
+**Equipe #3**: [GerenciadorDHCP](https://github.com/thasb/GerenciadorDHCP)
+
+> Membros:
+* Thiago Borges - 20152380340
+
+**Equipe #4**: [RouterConfig](https://github.com/suelando/routerconfig)
+
+> Membros:
+* Suelando Alves - 20141380351
+* Higor Souza - 2014238258
+
+**Equipe #5**: [Network Status View](https://github.com/BrunoE77/ProjetoDW)
+
+> Membros:
+* Bruno Evangelista - 20151380230
+* Gleydson Rodrigues da Silva Cavalcanti - 20151380354
+
+**Equipe #6**: [MyBackupWeb](https://github.com/AnaGilvanDWProjeto/DWProjetoBackup)
+
+> Membros:
+* Anna Cardoso - 20122380112
+* Gilvan Araújo - 20122380287
+
 
 ## Exigências do Projeto
 
