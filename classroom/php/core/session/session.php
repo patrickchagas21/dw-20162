@@ -1,15 +1,17 @@
 <?php
-	$times = (isset($_SESSION['count']))? $_SESSION['count'] : 0;
-	
+	session_start();
+
+	$times = $_SESSION['count'] ?? 0;
+
 	$times++;
-	
+
 	if(isset($_GET['zerar'])){
 		$times = 0;
-		$_SESSION['count'] = false;
+		$_SESSION['count'] = 0;
 	}else{
-		$_SESSION['count'] = $times;	
+		$_SESSION['count'] = $times;
 	}
-	
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,6 +21,7 @@
 </head>
 <body>
 	<p>A quantidade de vezes que vc acessou esta página é <?php echo $times ?></p>
-	<a href="cookie.php?zerar=true">zerar</a>
+	<a href="session.php?zerar=true">zerar</a>
+	<a href="session.php">+1</a>
 </body>
 </html>

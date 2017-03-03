@@ -1,7 +1,8 @@
 <?php
 require 'calc.php';
 $number = $_GET['fatorial'];
-$output = ($number != "")?"O fatorial de $number é fatorial($number)":"Não foi digitado valor algum";
+$fatorial = fatorial($number);
+$output = (!is_nan($number))?"O fatorial de $number é $fatorial":"Não foi digitado valor algum";
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,6 +11,6 @@ $output = ($number != "")?"O fatorial de $number é fatorial($number)":"Não foi
     <title></title>
   </head>
   <body>
-    <p><?php echo $output?></p>
+    <p><?php echo $output ?></p>
   </body>
 </html>

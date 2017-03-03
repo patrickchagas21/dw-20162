@@ -11,43 +11,24 @@
   </form>
   <div id="hello"></div>
   <script>
-    var nameField = document.querySelector('input[name=name]');
-    var helloButton = document.querySelector('input[type=submit]');
-    var helloField = document.querySelector('div#hello');
+    const nameField = document.querySelector('input[name=name]');
+    const helloButton = document.querySelector('input[type=submit]');
+    const helloField = document.querySelector('div#hello');
 
     helloButton.addEventListener('click', helloWorld, false);
 
     function helloWorld(event){
       let name = nameField.value;
-      makeRequest({
-        url: `hello.php?name=${name}`,
-        sucessCallback: (responseText) => {
-          helloField.innerHTML = responseText;
-        }
-      });
+      let url = `hello.php?name=${name}`;
+      ajax('get', url, responseText => helloField.innerHTML = responseText);
       event.preventDefault();
     }
 
-    function makeRequest({method = 'get',
-        url = '',
-        data = '',
-        sucessCallback = () => {},
-        errorCallback = () => {}
-      }){
+    function ajax(method, url, callback){
       let xhr = new XMLHttpRequest();
-      xhr.open(method, url, true);
-      xhr.onload = function(){
-        if (xhr.status >= 200 && xhr.status < 400) {
-          sucessCallback(xhr.responseText);
-        } else {
-          // Connect but it returned an error
-        }
-      }
-      xhr.onerror = function(){
-        // There was a connection error
-        errorCallback();
-      }
-      xhr.send(data);
+      xhr.open(method, url);
+      xhr.onload = () => callback(xhr.responseText);
+      xhr.send();
     }
   </script>
 </body>
