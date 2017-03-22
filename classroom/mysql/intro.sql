@@ -59,3 +59,31 @@ update history
 
 delete from history
   where id = 4;
+
+
+create table request_icmp(
+  id int not null auto_increment,
+  address varchar(68) not null,
+  ip varchar(68) not null,
+  transmitted int not null,
+  received int not null,
+  created_at datetime not null,
+  primary key (id)
+);
+insert into host (address, ip, transmitted, received, created_at) values ('www.ifpb.edu.br', '200.129.77.62', 2, 2, now());
+insert into host (address, ip, transmitted, received, created_at) values ('www.ifpb.edu.br', '200.129.77.62', 4, 2, now());
+select * from request_icmp;
+select address, ip, transmitted, received, transmitted-received as losted  from request_icmp;
+
+create table packet(
+  id int not null auto_increment,
+  seq int not null,
+  ttl int not null,
+  time float not null,
+  request_icmp_id int not null,
+  primary key (id),
+  foreign key (request_icmp_id) references request_icmp(id)
+);
+insert into packet (seq, ttl, time, request_icmp_id) values (1, 63, 2, 2),(2, 63, 1.95, 2);
+select * from packet where request_icmp_id = 2;
+select sum(time) from packet where request_icmp_id=2;
