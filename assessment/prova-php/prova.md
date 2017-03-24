@@ -1,4 +1,4 @@
-# Prova DW - Javascript
+# Prova DW - PHP
 
 ### OBSERVAÇÕES
 
