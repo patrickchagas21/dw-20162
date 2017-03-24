@@ -9,8 +9,8 @@ $mail->Host = 'smtp.gmail.com';
 $mail->Port = 587;
 $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
-$mail->Username = "username@gmail.com";
-$mail->Password = "yourpassword";
+$mail->Username = "username@gmail.com"; # $_ENV['username']
+$mail->Password = "yourpassword"; # $_ENV['password']
 $mail->setFrom('from@example.com', 'First Last');
 $mail->addAddress('whoto@example.com', 'John Doe');
 $mail->Subject = 'PHPMailer GMail SMTP test';
