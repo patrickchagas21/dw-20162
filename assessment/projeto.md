@@ -66,7 +66,7 @@ Assim, será exigido que a apresentação possua um tempo máximo de 3 minutos e
 * Bruno Evangelista - 20151380230
 * Gleydson Rodrigues da Silva Cavalcanti - 20151380354
 
-**Equipe #6**: [MyBackupWeb](https://github.com/AnaGilvanDWProjeto/DWProjetoBackup)
+**Equipe #6**: [MyBackupWeb](https://github.com/AnaGilvanDWProjeto/projeto-DW20162)
 
 > Membros:
 * Anna Cardoso - 20122380112
@@ -100,6 +100,29 @@ Portanto, para definir os critério de avaliação serão considerados questões
     - Uso de persistência de dados em SGBD.
   - Banco de Dados
     - O banco deve conter mais de uma entidade, e deve haver ao menos um relacionamento entre duas entidades.
+
+Para auxiliar no cálculo da nota final do projeto utilize esse checklist:
+
+Critérios (%)  | Projeto 1 | Projeto 2 | ... | Projeto n
+-------------- | --------- | --------- | --- | ---------
+Funcionamento | | | |
+Organização | | | |
+List | | | |
+Layout | | | |
+Dyn | | | |
+Extensões* | | | |
+Shell | | | |
+API | | | |
+Sessão | | | |
+Email | | | |
+PDO | | | |
+BD | | | |
+Nota** | | | |
+
+*(\*) Será exigido a utilização de no mínimo três extensões.*
+
+*(\*\*) A soma de todos os itens será 10,0.*
+
 
 Ocorrerão penalizações na falta de usabilidade, domínio do projeto e de cumprimento no prazo estipulado para apresentação e entrega do projeto. Também vale salientar que sua validade é perdida caso:
 
